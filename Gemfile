@@ -14,6 +14,7 @@ gem 'pundit'
 gem 'pry'
 gem 'bootstrap_form'
 gem 'devise'
+gem 'paperclip'
 
 
 group :development do
