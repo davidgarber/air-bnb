@@ -1,0 +1,10 @@
+<h1><%= @listing.title %><span class="pull-right"><small>Owner: <%= @listing.user.email %></small></span></h1>
+
+<%= image_tag @listing.avatar.url %>
+
+<h2>Location: <%= @listing.location %></h2>
+<p class="well"> <%= @listing.description %></p>
+
+<p>
+  <%= link_to "Return to listings", listings_path %>
+</p>
