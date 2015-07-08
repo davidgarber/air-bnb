@@ -15,6 +15,7 @@ gem 'pry'
 gem 'bootstrap_form'
 gem 'devise'
 
+
 group :development do
   gem 'byebug'
   gem 'web-console'
