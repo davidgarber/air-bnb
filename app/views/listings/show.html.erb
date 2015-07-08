@@ -1,9 +1,15 @@
-<h1><%= @listing.title %><span class="pull-right"><small>Owner: <%= @listing.user.email %></small></span></h1>
+<h1><%= @listing.title %></h1>
 
 <%= image_tag @listing.avatar.url %>
 
 <h2>Location: <%= @listing.location %></h2>
 <p class="well"> <%= @listing.description %></p>
+<span class="pull-right">
+        <%= link_to "Edit", edit_listing_path(@listing), :class => "btn btn-xs btn-warning" %>
+        <%= link_to "Delete", listing_path(@listing),
+        :data => {:confirm => "Are you sure?",
+          :method => "delete"}, :class => "btn btn-danger btn-xs " %>
+        </span>
 
 <p>
   <%= link_to "Return to listings", listings_path %>
