@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   attr_accessor :password
   validates_presence_of :password, :on => :create
+  validates_presence_of :email
 end
