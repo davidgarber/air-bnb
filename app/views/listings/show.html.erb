@@ -2,15 +2,17 @@
 
 <%= image_tag @listing.avatar.url %>
 
-<h2>Location: <%= @listing.location %></h2>
-<p class="well"> <%= @listing.description %></p>
+<h2>Location:
+  <%= @listing.location %></h2>
+<p class="well">
+  <%= @listing.description %></p>
 <span class="pull-right">
-        <%= link_to "Edit", edit_listing_path(@listing), :class => "btn btn-xs btn-warning" %>
-        <%= link_to "Delete", listing_path(@listing),
+  <%= link_to "Edit", edit_listing_path(@listing), :class => "btn btn-xs btn-warning" %>
+  <%= link_to "Delete", listing_path(@listing),
         :data => {:confirm => "Are you sure?",
           :method => "delete"}, :class => "btn btn-danger btn-xs " %>
-        </span>
+</span>
 
 <p>
-  <%= link_to "Return to listings", listings_path %>
+  <%= link_to "Return to listings", listings_path, :class => "btn btn-default btn-sm" %>
 </p>
