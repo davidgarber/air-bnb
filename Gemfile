@@ -15,6 +15,7 @@ gem 'pry'
 gem 'bootstrap_form'
 gem 'devise'
 gem 'paperclip'
+gem 'rails_12factor', group: :production
 
 
 
@@ -37,4 +38,6 @@ group :test do
 
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
+
+ruby "2.2.0"
 end
