@@ -13,7 +13,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessor :password
   has_many :listings
   has_many :reviews
   validates_presence_of :password, :on => :create
