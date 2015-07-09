@@ -2,6 +2,20 @@
 
 <%= image_tag @listing.avatar.url(:medium) %>
 
+<% if @listing.reviews.any? %>
+  <h4>Here are the reviews for this listing</h4>
+    <ul>
+      <% @listing.reviews.each do |review| %>
+        <li>
+          <%= review.review %>
+        </li>
+      <% end %>
+    </ul>
+    <% else %>
+      <p>
+        There are no reviews, yet.
+      </p>
+<% end %>
 <h2>Location:
   <%= @listing.location %></h2>
 <p class="well">
@@ -14,6 +28,10 @@
           :method => "delete"}, :class => "btn btn-danger btn-xs " %>
   <% end %>
 </span>
+
+<p>
+  <%= link_to "Review this listing", new_listing_review_path(@listing) %>
+</p>
 
 <p>
   <%= link_to "Return to listings", listings_path, :class => "btn btn-default btn-sm" %>

@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
   attr_accessor :password
   has_many :listings
+  has_many :reviews
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_uniqueness_of :email
