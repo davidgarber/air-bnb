@@ -7,10 +7,12 @@
 <p class="well">
   <%= @listing.description %></p>
 <span class="pull-right">
+  <% if @listing.user == current_user %>
   <%= link_to "Edit", edit_listing_path(@listing), :class => "btn btn-xs btn-warning" %>
   <%= link_to "Delete", listing_path(@listing),
         :data => {:confirm => "Are you sure?",
           :method => "delete"}, :class => "btn btn-danger btn-xs " %>
+  <% end %>        
 </span>
 
 <p>
