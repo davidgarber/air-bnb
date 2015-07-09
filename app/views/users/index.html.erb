@@ -1,0 +1,16 @@
+<div class="row">
+<h1>Users</h1> <hr>
+  <div class="column">
+    <table class="table">
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td>
+            <%= link_to user.email, user_path(user) %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

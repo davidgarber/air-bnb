@@ -17,6 +17,7 @@ gem 'devise'
 gem 'paperclip'
 
 
+
 group :development do
   gem 'byebug'
   gem 'web-console'
