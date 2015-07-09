@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <div id="user nav">
-
+      <div class="pull-right">
 
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>|Role: <%= current_user.role %>.
@@ -20,6 +20,7 @@
       <%= link_to "Login", new_user_session_path %>
     <% end %>
     </div>
+  </div>
 
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>

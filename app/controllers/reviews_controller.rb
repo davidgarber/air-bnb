@@ -15,6 +15,7 @@ class ReviewsController < ApplicationController
   def create
     @listing = Listing.find(params[:listing_id])
     @review = @listing.reviews.new(review_params)
+    @review.user = current_user
     if @review.save
       redirect_to listing_path(@review.listing)
     else

@@ -1,9 +1,12 @@
 <%= render('layouts/errors', :object => @review) %>
 
-<%= form_for [@listing, @review] do |f| %>
-  <%= f.label :review %>
-  <%= f.text_field :review %>
+<%= bootstrap_form_for [@listing, @review] do |f| %>
+  <div class="form-group well">
+      <%= f.text_area :review %>
+      <br>
   <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success btn-block" %>
   </p>
+</div>
+
 <% end %>
