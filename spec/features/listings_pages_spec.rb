@@ -16,4 +16,13 @@ describe "create new listing" do
       click_button 'Create Listing'
       expect(page).to have_content 'Listings'
   end
+
+  it 'gives an error when no Title, Description or Location is entered' do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    visit '/'
+    click_link 'Add a new listing'
+    click_button 'Create Listing'
+    expect(page).to have_content 'errors'
+  end
 end
